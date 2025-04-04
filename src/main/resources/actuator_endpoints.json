@@ -1,0 +1,92 @@
+{
+  "_links": [
+    {
+      "href": "http://localhost:8080/actuator",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/beans",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/caches/{cache}",
+      "templated": true
+    },
+    {
+      "href": "http://localhost:8080/actuator/caches",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/health",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/health/{*path}",
+      "templated": true
+    },
+    {
+      "href": "http://localhost:8080/actuator/info",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/conditions",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/configprops",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/configprops/{prefix}",
+      "templated": true
+    },
+    {
+      "href": "http://localhost:8080/actuator/env",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/env/{toMatch}",
+      "templated": true
+    },
+    {
+      "href": "http://localhost:8080/actuator/loggers",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/loggers/{name}",
+      "templated": true
+    },
+    {
+      "href": "http://localhost:8080/actuator/heapdump",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/threaddump",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/metrics",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/metrics/{requiredMetricName}",
+      "templated": true
+    },
+    {
+      "href": "http://localhost:8080/actuator/sbom",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/sbom/{id}",
+      "templated": true
+    },
+    {
+      "href": "http://localhost:8080/actuator/scheduledtasks",
+      "templated": false
+    },
+    {
+      "href": "http://localhost:8080/actuator/mappings",
+      "templated": false
+    }
+  ]
+}
