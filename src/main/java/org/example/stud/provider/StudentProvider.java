@@ -1,5 +1,6 @@
 package org.example.stud.provider;
 
+import org.example.common.config.UserConfiguration;
 import org.example.stud.model.Course;
 import org.example.stud.model.Student;
 import org.example.stud.service.CourseService;
@@ -13,9 +14,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.stream.IntStream;
 
-import static org.example.common.CommonUtilEnum.SKILL_SET;
-import static org.example.common.CommonUtilEnum.USER_NAME;
-
 @Component
 public class StudentProvider {
 
@@ -25,16 +23,19 @@ public class StudentProvider {
     @Autowired
     private CourseService courseService;
 
+    @Autowired
+    private UserConfiguration config;
+
 
     @Bean
     public List<Student> students() {
         Random random = new Random();
-        List<Student> students = IntStream.range(0, USER_NAME.length()).mapToObj(i -> Student.builder()
-                .studId(i + 1l).studName(USER_NAME.skill()[i])
+        List<Student> students = IntStream.range(0, config.getUsername().length).mapToObj(i -> Student.builder()
+                .studId(i + 1l).studName(config.getUsername()[i])
                 .build()).toList();
 
-        List<Course> courses = IntStream.range(0, SKILL_SET.length()).mapToObj(i -> Course.builder()
-                .courseId(i + 101l).courseName(SKILL_SET.skill()[i])
+        List<Course> courses = IntStream.range(0, config.getSkillSet().length).mapToObj(i -> Course.builder()
+                .courseId(i + 101l).courseName(config.getSkillSet()[i])
                 .build()).toList();
         studentService.saveStudents(students);
         courseService.saveCourses(courses);
@@ -45,7 +46,7 @@ public class StudentProvider {
                 Course course = courses.get(random.nextInt(i, j));
                 courseList.add(course);
             }
-            courseList.add(courses.get(SKILL_SET.length() - 1));
+            courseList.add(courses.get(config.getSkillSet().length - 1));
             stud.setCourses(courseList);
         });
         studentService.saveStudents(students);
