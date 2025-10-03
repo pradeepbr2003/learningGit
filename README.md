@@ -1,10 +1,11 @@
+# Cherry Pick demonstration
 -----------------------------------------------------------------------------------
 
 Main purpose of this project is intended to practice git commands like 
 -------------------------------------------------------------------------------
 git merge
-// Whenever one branch(for ex:- A branch) needs to be merged with 
-//other branch(for ex:- B branch)   it always create 
+// Whenever one branch(for ex:- A branch) needs to be merged with
+//other branch(for ex:- B branch)   it always create
 //new commit id for merge along with other commit ids of A
 
 git rebase
@@ -12,7 +13,7 @@ git rebase
 
 git rebase -i head~3
 //We can use above command,
-//if we want to squash and merge all 3 commit ids under head into single commit 
+//if we want to squash and merge all 3 commit ids under head into single commit
 
 ------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------
