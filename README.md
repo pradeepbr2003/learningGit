@@ -1,4 +1,4 @@
-# Cherry Pick demonstration
+# Cherry Pick Demo
 -----------------------------------------------------------------------------------
 
 Main purpose of this project is intended to practice git commands like 
